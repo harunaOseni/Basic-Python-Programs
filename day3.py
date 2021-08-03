@@ -375,3 +375,100 @@
 
 # if shift > 26:
 #     shift = shift % 26
+
+# Dictionaries, nesting...
+
+# student score program
+# student_scores = {
+#     "Harry": 81,
+#     "Ron": 78,
+#     "Hermione": 99,
+#     "Draco": 74,
+#     "Neville": 62,
+# }
+
+# student_grades = {}
+
+# for student in student_scores:
+#     if student_scores[student] <= 70:
+#         student_grades[student] = "Fail"
+#     elif student_scores[student] >= 71 and student_scores[student] <= 80:
+#         student_grades[student] = "Acceptable"
+#     elif student_scores[student] >= 81 and student_scores[student] <= 90:
+#         student_grades[student] = "Exceeds Expectations"
+#     elif student_scores[student] >= 91 and student_scores[student] <= 100:
+#         student_grades[student] = "Outstanding"
+
+# print(student_grades)
+
+# travel log program
+
+# travel_log = [
+#     {
+#         "country": "France",
+#         "visits": 12,
+#         "cities": ["Paris", "Lille", "Dijon"]
+#     },
+#     {
+#         "country": "Germany",
+#         "visits": 5,
+#         "cities": ["Berlin", "Hamburg", "Stuttgart"]
+#     },
+# ]
+
+# def add_new_country(country_name,  amount_of_visits, states_visited):
+#     travel_log.append(
+#         {
+#             "country": country_name,
+#             "visits": amount_of_visits,
+#             "cities": states_visited
+#         }
+#     )
+
+# add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+# print(travel_log)
+# starting_dictionary = {
+#     "a": 9,
+#     "b": 8,
+# }
+
+
+# final_dictionary = {
+#     "a": 9,
+#     "b": 8,
+#     "c": 7,
+# }
+
+# auction bid program
+# import os
+
+# ended = False
+# auction_bid = {}
+
+# print("Welcome to the secret auction program.")
+
+
+# def highest_auction_bidder(auction_bid):
+#     highest_bid = 0
+#     highest_bidder = ""
+#     for bidder in auction_bid:
+#         if auction_bid[bidder] > highest_bid:
+#             highest_bid = auction_bid[bidder]
+#             highest_bidder = bidder
+#     print(
+#         f"The highest bidder is {highest_bidder} with a bid of ${highest_bid}")
+
+
+# while not ended:
+#     bidder = input("What is your name?: ")
+#     bid_amount = int(input("What's your bid?: $"))
+#     auction_bid[bidder] = bid_amount
+#     next_bidder = input("Does anyone else want to bid?: Yes or no \n")
+#     if next_bidder == "no":
+#         # check for highest bidder
+#         os.system("clear||cls")
+#         highest_auction_bidder(auction_bid)
+#         ended = True
+#     elif next_bidder == "yes":
+#         os.system("clear||cls")
+#         ended = False
