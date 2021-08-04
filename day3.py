@@ -472,3 +472,112 @@
 #     elif next_bidder == "yes":
 #         os.system("clear||cls")
 #         ended = False
+
+# function with output
+# def format_name(f_name, l_name):
+#     f_name = f_name.title()
+#     l_name = l_name.title()
+#     return f_name + " " + l_name
+
+# print(format_name("john", "smith"))
+
+# def is_leap(year):
+#     if year % 4 == 0:
+#         if year % 100 == 0:
+#             if year % 400 == 0:
+#                 return True
+#             else:
+#                 return False
+#         else:
+#             return True
+#     else:
+#         return False
+
+
+# def days_in_month(year, month):
+#     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+#     if is_leap(year):
+#         if month == 2:
+#             return f"The year is {year} is a leap year and the month {month} has {month_days[month - 1] + 1} days"
+#         else:
+#             return f"The year is {year} is a leap year and the month {month} has {month_days[month - 1]} days"
+#     else:
+#         return f"The year is {year} is not a leap year and the month {month} has {month_days[month - 1]} days"
+
+# year = int(input("Enter a year: "))
+# month = int(input("Enter a month: "))
+# days = days_in_month(year, month)
+# print(days)
+
+# calculator program
+# dictionaty containing math operations
+
+# def add(n1, n2):
+#     return n1 + n2
+
+
+# def subtract(n1, n2):
+#     return n1 - n2
+
+
+# def multiply(n1, n2):
+#     return n1 * n2
+
+
+# def divide(n1, n2):
+#     return n1 / n2
+
+# def power(n1, n2):
+#     return n1 ** n2
+
+
+# operations = {
+#     "+": add,
+#     "-": subtract,
+#     "*": multiply,
+#     "/": divide,
+#     "**": power
+# }
+
+
+# def calculator():
+#     ended = False
+#     next_phase = False
+#     while not ended:
+#         num1 = float(input("What's the first number?: "))
+#         for symbol in operations:
+#             print(symbol)
+
+#         operation_symbol = input("Pick an operation: ")
+#         num2 = float(input("What's the next number?: ")) 
+#         calculation_function = operations[operation_symbol]
+#         first_answer = calculation_function(num1, num2)
+
+#         print(f"{num1} {operation_symbol} {num2} = {first_answer}")
+
+#         continue_calculation = input(
+#             f"Type 'y' to continue calculating with {first_answer} or type 'n' to restart: ")
+#         if continue_calculation == "n":
+#             calculator()
+#         else:
+#             while not next_phase:
+#                 for symbol in operations:
+#                     print(symbol)
+#                 operation_symbol = input("Pick an operation: ")
+#                 num3 = float(input("What's the next number?: "))
+#                 calculation_function = operations[operation_symbol]
+#                 second_answer = calculation_function(first_answer, num3)
+
+#                 print(f"{first_answer} {operation_symbol} {num3} = {second_answer}")
+
+#                 continue_calculation = input(
+#                     f"Type 'y' to continue calculating with {second_answer} or type 'n' to restart calculator: ")
+#                 if continue_calculation == "n":
+#                     next_phase = True
+#                     calculator()
+#                 else:
+#                     next_phase = False
+#                     first_answer = second_answer
+
+
+# calculator()
