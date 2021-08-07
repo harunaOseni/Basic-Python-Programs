@@ -679,3 +679,57 @@ while input("Would you like to play Black Jack? yes or no: ").lower() == "yes":
     play_black_jack()
 else:
     print(f"Goodbye, {your_name}, be sure to come again!")
+    
+
+import random
+from art import *
+
+# Number guessing game program
+
+
+def random_number():
+    return random.randint(1, 100)
+
+
+def guess_number_comparison(guess, random_number, easy_attempt, hard_attempt):
+    if guess == random_number:
+        return f"Congratulations! You guessed the number {random_number} correctly😍😍!"
+    if (guess != random_number and easy_attempt == 0) or (guess != random_number and hard_attempt == 0):
+            return f"You ran out of attempts, the number was {random_number}, 😪😢."
+    elif (guess < random_number and easy_attempt != 0) or (guess < random_number and hard_attempt != 0):
+        return f"Your guess of {guess} was too low, try again mate."
+    elif (guess > random_number and easy_attempt != 0) or (guess > random_number and hard_attempt != 0):
+        return f"Your guess of {guess} was too high, try again mate."
+
+
+def play_number_guessing_game():
+    #print intro and logo 
+    print(logo)
+    print("Welcome to the number guessing game!😍")
+
+    # set the initial values
+    number = random_number()
+    guess = 0
+    easy_attempt = 10
+    hard_attempt = 5
+    choose_difficulty = input("Choose a difficulty (easy or hard): ")
+    # loop until the guess is correct
+    if choose_difficulty == "easy":
+        while easy_attempt != 0 and guess != number:
+            print(
+                f"You have {easy_attempt} attempts remaining to guess the number.")
+            guess = int(input("Make a guess "))
+            easy_attempt -= 1
+            print(guess_number_comparison(
+                guess, number, easy_attempt, hard_attempt))
+    elif choose_difficulty == "hard":
+        while hard_attempt != 0 and guess != number:
+            print(
+                f"You have {hard_attempt} attempts remaining to guess the number.")
+            guess = int(input("Make a guess "))
+            hard_attempt -= 1
+            print(guess_number_comparison(
+                guess, number, easy_attempt, hard_attempt))
+
+
+play_number_guessing_game()
