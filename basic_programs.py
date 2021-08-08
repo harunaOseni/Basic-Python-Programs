@@ -733,3 +733,66 @@ def play_number_guessing_game():
 
 
 play_number_guessing_game()
+
+
+
+
+# Higher Lower Game program
+# import art.py and print game logo
+from art import *
+import random
+from game_data import *
+import os
+print(logo)
+
+
+# function to format sentence data to look the the example below
+# e.g Katy Perry, a Musician, from United States.
+def celebrity_summary(celebrity):
+    celebrity_name = celebrity["name"]
+    celebrity_description = celebrity["description"]
+    celebrity_country = celebrity["country"]
+    return f"{celebrity_name}, a {celebrity_description}, from {celebrity_country}"
+
+# function to return answers in relation to following comparison
+def followers_count_answer(guess, celebrityA_followers, celebrityB_followers):
+    if celebrityA_followers > celebrityB_followers:
+        return guess == "A"
+    else:
+        return guess == "B"
+
+
+# main function to play the higher lower game
+def play_higher_lower_game(celebrities_data):
+    game_playing = True
+    score = 0
+    celebrity_B = random.choice(celebrities_data)
+
+    while game_playing:
+        celebrity_A = celebrity_B
+        celebrity_B = random.choice(celebrities_data)
+
+        if score >= 1:
+            print(f"You're right! Current score: {score}")
+
+        print(f"Celebrity A: {celebrity_summary(celebrity_A)}")
+        print("")
+        print(vs)
+        print("")
+        print(f"Celebrity B: {celebrity_summary(celebrity_B)}")
+
+        guess = input(
+            "Which of these two celebrities is more popular? A or B: ")
+        is_guess_correct = followers_count_answer(
+            guess, celebrity_A["follower_count"], celebrity_B["follower_count"])
+        os.system("clear||cls")
+        if is_guess_correct: 
+            score += 1
+
+        else:
+            os.system("clear||cls")
+            game_playing = False
+            print(f"Sorry , that's wrong. Final score: {score}")
+
+
+play_higher_lower_game(data) 
