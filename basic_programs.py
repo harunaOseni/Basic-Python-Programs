@@ -1,3 +1,4 @@
+Rollercoaster ride program
 number = int(input("Enter a number: "))
 
 if number % 2 == 0:
@@ -38,7 +39,7 @@ else:
 can ride the rollercoaster!")
 
 
-BMI calculator
+BMI calculator program
 weight = int(input("Enter your weight in kg: "))
 height = float(input("Enter your height in cm: "))
 
@@ -147,6 +148,8 @@ elif true_love_score_int >= 40 and true_love_score_int <= 50:
 
 else:
     print(f"Your score is {true_love_score_int}")
+
+Treasure Island Program
 
 print('''
 *******************************************************************************
@@ -342,7 +345,24 @@ while not end_of_game:
     print(stages[lives])
 
 ceaser cipher program 
-from art import logo
+logo = """           
+ ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
+a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8  
+8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88          
+"8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88          
+ `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88   
+            88             88                                 
+           ""             88                                 
+                          88                                 
+ ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,  
+a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8  
+8b         88 88       d8 88       88 8PP""""""" 88          
+"8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88          
+ `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88          
+              88                                             
+              88           
+"""
+
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
             'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 ended = False
@@ -379,6 +399,7 @@ if shift > 26:
 Dictionaries, nesting...
 
 student score program
+
 student_scores = {
     "Harry": 81,
     "Ron": 78,
@@ -481,6 +502,8 @@ def format_name(f_name, l_name):
 
 print(format_name("john", "smith"))
 
+
+Leap year month program 
 def is_leap(year):
     if year % 4 == 0:
         if year % 100 == 0:
@@ -510,7 +533,7 @@ days = days_in_month(year, month)
 print(days)
 
 calculator program
-dictionaty containing math operations
+dictionary containing math operations
 
 def add(n1, n2):
     return n1 + n2
@@ -682,7 +705,14 @@ else:
     
 
 import random
-from art import *
+logo = """
+  ________                              ___________.__              _______               ___.                 
+ /  _____/ __ __   ____   ______ ______ \__    ___/|  |__   ____    \      \  __ __  _____\_ |__   ___________ 
+/   \  ___|  |  \_/ __ \ /  ___//  ___/   |    |   |  |  \_/ __ \   /   |   \|  |  \/     \| __ \_/ __ \_  __ \
+\    \_\  \  |  /\  ___/ \___ \ \___ \    |    |   |   Y  \  ___/  /    |    \  |  /  Y Y  \ \_\ \  ___/|  | \/
+ \______  /____/  \___  >____  >____  >   |____|   |___|  /\___  > \____|__  /____/|__|_|  /___  /\___  >__|   
+        \/            \/     \/     \/                  \/     \/          \/            \/    \/     \/       
+"""
 
 # Number guessing game program
 
@@ -743,6 +773,25 @@ from art import *
 import random
 from game_data import *
 import os
+
+logo = """
+    __  ___       __             
+   / / / (_)___ _/ /_  ___  _____
+  / /_/ / / __ `/ __ \/ _ \/ ___/
+ / __  / / /_/ / / / /  __/ /    
+/_/ ///_/\__, /_/ /_/\___/_/     
+   / /  /____/_      _____  _____
+  / /   / __ \ | /| / / _ \/ ___/
+ / /___/ /_/ / |/ |/ /  __/ /    
+/_____/\____/|__/|__/\___/_/     
+"""
+vs = """
+ _    __    
+| |  / /____
+| | / / ___/
+| |/ (__  ) 
+|___/____(_)
+""" 
 print(logo)
 
 
